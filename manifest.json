@@ -1,0 +1,16 @@
+{
+    "name": "Secure Password Generator",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "description": "An extension that generates secure passwords and allows users to copy them to the clipboard.",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "lock.png"
+    },
+    "permissions": ["activeTab"]
+}
