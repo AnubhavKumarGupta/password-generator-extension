@@ -1,8 +1,11 @@
 # password-generator-extension
 An extension that generates secure passwords and allows users to copy them to the clipboard.
 
-#
 
+<img width="959" alt="image" src="https://github.com/AnubhavKumarGupta/password-generator-extension/blob/f0aedce7b65042b08b06a4110c5669cc14d4b79a/preview.png">
+
+
+# 
 
 ## Overview
 This project is a simple web-based password generator extension. It allows users to generate random, secure passwords and copy them to the clipboard with a single click. The interface is built using HTML, CSS, and JavaScript, with additional styling from Bootstrap and Font Awesome.
