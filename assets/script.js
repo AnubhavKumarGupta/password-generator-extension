@@ -1,7 +1,7 @@
 const genBtn = document.getElementById("generatebtn");
 const copyBtn = document.getElementById("copyBtn");
 const textField = document.getElementById("textField");
-const copyMessage = document.getElementById("copyMessage"); 
+const copyMessage = document.getElementById("copyMessage");
 
 copyBtn.addEventListener("click", copyPassword);
 genBtn.addEventListener("click", generatePassword);
@@ -29,3 +29,5 @@ function copyPassword() {
     window.alert("Click the generate button");
   }
 }
+
+
