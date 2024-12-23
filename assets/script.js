@@ -1,33 +1,32 @@
-const genBtn = document.getElementById("generatebtn");
-const copyBtn = document.getElementById("copyBtn");
-const textField = document.getElementById("textField");
-const copyMessage = document.getElementById("copyMessage");
+const genBtn = document.getElementById("generatebtn"); // Get the generate button
+const copyBtn = document.getElementById("copyBtn"); // Get the copy button
+const textField = document.getElementById("textField"); // Get the text field
+const copyMessage = document.getElementById("copyMessage"); // Get the copy message
 
-copyBtn.addEventListener("click", copyPassword);
-genBtn.addEventListener("click", generatePassword);
+copyBtn.addEventListener("click", copyPassword); // Add event listener to the copy button
+genBtn.addEventListener("click", generatePassword); // Add event listener to the generate button
 
 function generatePassword() {
+  // Function to generate a random password
   const characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789=*~`!@#$%^&*()_-+={[}]|:;<,>.?/";
-  const passLength = 16;
-  let password = "";
-  for (let i = 0; i < passLength; i++) {
-    let index = Math.random() * characters.length;
-    password += characters.charAt(index);
-  }
-  textField.value = password;
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789=*~`!@#$%^&*()_-+={[}]|:;<,>.?/"; // Characters to be used in the password
+  const passLength = 16; // Length of the password
+  let password = ""; // Variable to store the password
+  for (let i = 0; i < passLength; i++) { // Loop to generate the password
+    let index = Math.random() * characters.length; // Generate a random index
+    password += characters.charAt(index); // Add the character at the generated index to the password
+  } // End of loop
+  textField.value = password; // Set the password to the text field
 }
 
-function copyPassword() {
-  if (textField.value != "") {
-    navigator.clipboard.writeText(textField.value);
-    copyMessage.style.display = "block"; // Show the copied message
-    setTimeout(() => {
+function copyPassword() { // Function to copy the password to the clipboard
+  if (textField.value != "") { // Check if the text field is not empty
+    navigator.clipboard.writeText(textField.value); // Copy the password to the clipboard
+    copyMessage.style.display = "block"; // Display the copied message
+    setTimeout(() => { // Set a timeout
       copyMessage.style.display = "none"; // Hide the copied message after 0.5 seconds
-    }, 500);
-  } else {
-    window.alert("Click the generate button");
-  }
-}
-
-
+    }, 500); // End of timeout
+  } else { // If the text field is empty display an alert message to the user to generate a password first before copying it to the clipboard 
+    window.alert("Click the generate button"); // Alert message 
+  } // End of if statement
+} // End of function
